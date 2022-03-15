@@ -6,6 +6,28 @@
 header {
     background-color: #B7F2FE;
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+header nav ul li{
+    margin-right: 15px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header nav ul li a:hover{
+    color: darkblue;
+    font-size: 25px;
 }
 
 .section--figuras {
