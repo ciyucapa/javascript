@@ -26,9 +26,15 @@ header {
     text-align: center;
 }
 
-.section--figuras__cuadrado h2 {
+.section--figuras__cuadrado div h2 {
     margin-bottom: 20px;
 }
+
+.section--figuras__cuadrado div img {
+    width: 150px;
+    height: 150px;
+}
+
 
 .section--figuras__cuadrado form {
     display: flex;
