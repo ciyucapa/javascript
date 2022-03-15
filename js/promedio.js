@@ -85,20 +85,17 @@ const calculateModa = () => {
     const dateList = calculateList();
     const listaCount = {};
 
-    dateList.map(
-        function(elemento) {
-            if(listaCount[elemento]){
-                listaCount[elemento]+=1
-            } else {
-                listaCount[elemento]=1;
-            }
+    dateList.map(elemento => {
+        if(listaCount[elemento]){
+            listaCount[elemento]+=1
+        } else {
+            listaCount[elemento]=1;
         }
-    );
+    });
 
     const listaArray = Object.entries(listaCount).sort(function(a, b){return a[1] - b[1]});
 
     const moda = listaArray[listaArray.length - 1];
-    console.log(moda)
     
     const resultModa = document.getElementById("ResultModa")
     resultModa.innerText = "La moda es $ " + moda[0] + "porque se repite " + moda[1] + "veces"
