@@ -11,6 +11,16 @@ const areaTriangulo = (base, altura) => {
     return (base * altura) / 2;
 }
 
+const alturaTrainqgulo = (lado1, lado2, base) => {
+    if(lado1 == lado2 && base) {
+        const ladoCuadrado = lado1 * lado2 ;
+        const baseCuadrado = (base * base) / 4;
+        const resultado1 = Math.sqrt(ladoCuadrado - baseCuadrado)
+        return resultado1
+    } 
+    return alert("Los lados del triangulo no son iguales para sacar la altura!!!! =( ")
+}
+
 //Medidas Circulo
 const diametroCirculo = (radio) => radio * 2;
 
@@ -68,6 +78,20 @@ const calculateAreaTriangulo = () => {
     const area = areaTriangulo(baseValue, alturaValue);
     document.querySelector("#triangulo").insertAdjacentHTML('afterend', `<div>El area es ${area}</div>`)
 
+}
+
+const calculateAlturaTriangulo = () => {
+    const lado1 = document.getElementById("InputLado1");
+    const ladoValue1 = Number(lado1.value);
+
+    const lado2 = document.getElementById("InputLado2");
+    const ladoValue2 = Number(lado2.value);
+
+    const base = document.getElementById("InputBase");
+    const baseValue = Number(base.value);
+
+    const altura = alturaTrainqgulo(ladoValue1, ladoValue2, baseValue);
+    document.querySelector("#triangulo").insertAdjacentHTML('afterend', `<div>La altura es ${altura}</div>`)
 }
 
 //Formulario Circulo

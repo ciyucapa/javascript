@@ -15,7 +15,10 @@
     </header>
     <section class="section--figuras">
         <section class="section--figuras__cuadrado">
-            <h2>Calcula area y perimetro de un Cuadrado</h2>
+            <div>
+                <h2>Calcula area y perimetro de un Cuadrado</h2>
+                <img src="./assets/cuadrado.png" alt="cuadrado" />
+            </div>
             <form id="cuadrado">
                 <label>Escribe cuanto mide el lado de el Cuadrado
                     <input id="InputCuadrado" type="number"/>
@@ -28,7 +31,10 @@
             </form>
         </section>
         <section class="section--figuras__cuadrado">
-            <h2>Calcula area y perimetro de un Triangulo</h2>
+            <div>
+                <h2>Calcula area y perimetro de un Triangulo</h2>
+                <img src="./assets/triangulo.png" alt="triangulo" />    
+            </div>
             <form id="triangulo">
                 <label>Escribe cuanto mide el lado 1 de el Triangulo
                     <input id="InputLado1" type="number"/>
@@ -49,11 +55,15 @@
                 <div>
                     <button type="button" onclick="calculatePerimetroTriangulo()" >Calcular perimetro</button>
                     <button type="button" onclick="calculateAreaTriangulo()" >Calcular area</button>
+                    <button type="button" onclick="calculateAlturaTriangulo()">Calcula Altura</button>
                 </div>
             </form>
         </section>
         <section class="section--figuras__cuadrado">
-            <h2>Calcula area y perimetro de un Circulo</h2>
+            <div>
+                <h2>Calcula area y perimetro de un Circulo</h2>
+                <img src="./assets/lavado-en-seco.png" alt="circulo" />
+            </div>
             <form id="circulo">
                 <label for="InputRadio">Escribe el radio de un circulo
                     <input id="InputRadio" type="number" aria-describedby="inputGroupPrepend"/>
