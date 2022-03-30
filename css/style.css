@@ -3,31 +3,77 @@
     margin: 0;
 }
 
+:root {
+    --primary: #121f3d;
+    --white: #fff;
+    --gray: #2a324b;
+  }
+
 header {
-    background-color: #B7F2FE;
+    background-color: black;
     padding: 20px;
     display: flex;
     justify-content: space-around;
+    color: beige;
+    height: 50px;
+    width: 100%;
+    align-items: center;
 }
 
-header nav ul{
+header h1 {
+    width: 20%;
+}
+
+header nav {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+    margin-right: 40px;
+}
+
+header nav .nav__menu {
     display: flex;
     flex-direction: row;
-    list-style: none;
 }
 
-header nav ul li{
-    margin-right: 15px;
+header nav .nav__menu div {
+    margin: 0 10px;
 }
 
-header nav ul li a{
+header nav .nav__menu div a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
 
-header nav ul li a:hover{
-    color: darkblue;
-    font-size: 25px;
+header nav .nav__menu div a:active, a:hover {
+    color:white;
+    background-color: dimgrey;
+    transition: .5s;
+}
+
+.nav__toggle svg {
+    width: 2rem;
+    fill: var(--white);
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#nav__checkbox {
+    display: none;
+}
+
+body {
+    position: relative;
+    padding-bottom: 12em;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .section--figuras {
@@ -106,11 +152,96 @@ header nav ul li a:hover{
 }
 
 footer {
-    background-color: #B7F2FE;
-    width: 100%;
-    height: 40px;
-    color: black;
+    background-color: black;
+    color: white;
     font-weight: bold;
     text-align: center;
     align-items: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer--text  h1{
+    color: beige;
+}
+
+.footer--container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer--container__logos {
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+}
+
+
+@media (max-width: 1137px) {
+    header nav .nav__menu div {
+        margin: 0 ;
+    }
+
+    header nav .nav__menu div a {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 858px) {
+
+    header h1 {
+        margin-left: 20px;
+    }
+
+    header nav label {
+        margin-right: 10px;
+    }
+
+    header nav .nav__menu div a {
+        font-size: 14px;
+    }
+
+    .nav__toggle svg {
+        display: block;
+    }
+
+    header nav .nav__menu {
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -1000px;
+        text-align: center;
+        transition: all .5s;
+        background-color: black;
+
+    }
+
+    header nav .nav__menu div {
+        margin: 20px 0;
+        text-align: left;
+    }
+
+    header nav .nav__menu div a {
+        font-size: 20px;
+    }
+
+    header nav .nav__menu div:hover {
+        background-color: #9BCFDA;
+        color: red;
+    }
+
+    #nav__checkbox:checked ~ #menu  {
+        left: 0;
+    }
+
+    header nav {
+        margin-right: 0px;
+    }
 }

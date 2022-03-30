@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promedio Moda Mediana</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/promedio.js"></script>
+    <script src="./js/capacidad.js"></script>
+    <title>Capacidad/Endeudamiento</title>
 </head>
 <body>
     <header>
@@ -29,17 +29,16 @@
     </header>
     <section class="section--figuras__cuadrado">
         <form>
-            <label>Ingresa el salario del empleado y luego preciona calcular para insertar el proximo
-                <input id="InputSalarios" type="number" />
+            <label>Ingresa tu salario
+                <input type="number" id="salario" />
             </label>
-            <button type="button" onclick="calculateList()" >Calcular</button>
-            <button type="button" onclick="calculatePromedio()" >Calcular Promedio</button>
-            <button type="button" onclick="calculateMediana()" >Calcular Mediana</button>
-            <button type="button" onclick="calculateModa()" >Calcular Moda</button>
-            <p id="ResultL"></p>
-            <p id="ResultPromedio"></p>
-            <p id="ResultMediana"></p>
-            <p id="ResultModa"></p>
+            <label>Ingresa el total de tus gastos
+                <input type="number" id="gastos" />
+            </label>
+            <button type="button" onclick="calculateCapacidadEndeudamiento()" >Calcular nivel de endeudamiento</button>
+            <button type="button" onclick="calculateNivelEndeudamiento()" >Calcular nivel de endeudamiento</button>
+            <p id="ResultadoC"></p>
+            <p id="ResultadoN"></p>
         </form>
     </section>
     <footer>
